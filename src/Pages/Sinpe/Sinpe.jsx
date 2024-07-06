@@ -22,8 +22,8 @@ const Sinpe = () => {
             : <FaArrowCircleDown className={style} />
     }
     return (
-        <div className='p-2'>
-            <div className='flex gap-3 p-3'>
+        <>
+            <div className='flex gap-3 pb-3'>
                 <button className='btn btn-outline btn-primary-content' onClick={() => document.getElementById('AddSinpe').showModal()}><IoIosAddCircleOutline className='size-8' />Sinpe</button>
                 <dialog id="AddSinpe" className="modal">
                     <div className="modal-box space-y-3 flex flex-col items-center w-auto">
@@ -76,7 +76,7 @@ const Sinpe = () => {
 
 
 
-        </div>
+        </>
     )
 }
 

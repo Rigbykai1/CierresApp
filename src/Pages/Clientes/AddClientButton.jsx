@@ -4,7 +4,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 const AddClientButton = () => {
     return (
         <>
-            <button className="btn btn-outline" onClick={() => document.getElementById('addCliente').showModal()}><IoMdPersonAdd />Añadir cliente</button>
+            <button className="btn btn-outline" onClick={() => document.getElementById('addCliente').showModal()}><IoMdPersonAdd />Cliente</button>
             <dialog id="addCliente" className="modal">
                 <div className="modal-box">
                     <div className='flex justify-between'>

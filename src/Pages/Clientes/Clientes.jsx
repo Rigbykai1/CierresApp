@@ -7,15 +7,14 @@ import AddClientButton from './AddClientButton';
 const Clientes = () => {
     return (
         <>
-            <div className='flex flex-wrap gap-3 p-3 justify-between place-items-center'>
+            <div className='flex flex-wrap gap-3 pb-3 justify-between place-items-center'>
                 <div className='flex gap-1 place-items-center'>
                     <FilterButton />
                     <AddClientButton />
-
                 </div>
-                <div className='flex space-x-1'>
+                <div className='flex gap-1'>
                     <label className="input input-bordered flex items-center gap-2">
-                        <input type="text" className="grow" placeholder="Search" />
+                        <input type="text" className="w-full sm:grow" placeholder="Search" />
                     </label>
                     <button className="btn btn-accent"><FaSearch /></button>
                 </div>

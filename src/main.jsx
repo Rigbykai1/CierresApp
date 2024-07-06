@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { createHashRouter, RouterProvider } from "react-router-dom";
-import AppLayout from './Pages/AppRouter';
+import AppLayout from './Pages/AppLayout';
 import Inicio from "./Pages/Inicio/Inicio"
 import Clientes from "./Pages/Clientes/Clientes"
 import Creditos from "./Pages/Creditos/Creditos"

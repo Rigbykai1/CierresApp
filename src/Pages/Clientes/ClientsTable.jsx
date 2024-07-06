@@ -7,7 +7,7 @@ const ClientsTable = () => {
 
     return (
         <>
-            <div className="overflow-x-auto bg-neutral mx-3">
+            <div className="overflow-x-auto bg-neutral">
                 <table className="table table-xs table-pin-rows table-pin-cols">
                     <thead>
                         <tr>

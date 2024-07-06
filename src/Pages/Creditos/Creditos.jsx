@@ -2,8 +2,8 @@ import AddCreditForm from './AddCreditForm';
 
 const Creditos = () => {
     return (
-        <div className='p-2'>
-            <div className='flex gap-3 p-3'>
+        <>
+            <div className='flex gap-3 pb-3'>
                 <AddCreditForm />
             </div>
             <div className='flex flex-wrap gap-3'>
@@ -28,7 +28,7 @@ const Creditos = () => {
 
             </div>
 
-        </div>
+        </>
     )
 }
 

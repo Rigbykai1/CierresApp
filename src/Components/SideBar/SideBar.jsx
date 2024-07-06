@@ -38,7 +38,7 @@ const SideBar = () => {
     const btnSize = isOpen ? "w-32" : "w-full";
 
     return (
-        <div className="flex flex-col p-2 gap-3 h-[97vh] bg-neutral m-2 rounded-lg justify-between">
+        <div className="flex flex-col p-2 gap-3 h-[97vh] bg-neutral m-2 rounded-sm justify-between">
             <div className='flex flex-col gap-3'>
                 <SideBarToggler isOpen={isOpen} handleBar={handleBar} />
                 <ColorModeToggler />
