@@ -5,8 +5,8 @@ import { GiCreditsCurrency } from "react-icons/gi";
 import { TbReportSearch } from "react-icons/tb";
 import { IoMdSettings } from "react-icons/io";
 import { Link, useLocation } from 'react-router-dom';
-import ColorModeToggler from './ColorModeToggler';
-import SideBarToggler from './SideBarToggler';
+import ColorModeToggler from '../ColorModeToggler';
+import SideBarToggler from '../SideBarToggler';
 
 const SideBar = () => {
     const [isOpen, setIsOpen] = useState(() => {
