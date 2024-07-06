@@ -1,35 +1,48 @@
-import AddCreditForm from './AddCreditForm';
+import { IoIosAdd, IoIosAddCircleOutline } from "react-icons/io";
+
+import AddCreditForm from "./AddCreditForm";
 
 const Creditos = () => {
-    return (
-        <>
-            <div className='flex gap-3 pb-3'>
-                <AddCreditForm />
+  return (
+    <>
+      <div className="flex gap-3 pb-3">
+        <button
+          className="btn btn-outline btn-primary-content"
+          onClick={() => document.getElementById("EditClient").showModal()}
+        >
+          <IoIosAddCircleOutline className="size-8" />
+          Crédito
+        </button>
+        <AddCreditForm />
+      </div>
+      <div className="flex flex-wrap gap-3">
+        <div className="stats bg-black/70 flex flex-col max-w-sm text-white">
+          <div className="stat">
+            <h3 className="stat-value text-lg sm:text-3xl">Client name</h3>
+            <button className="btn btn-sm btn-error justify-center">
+              <IoIosAdd />
+              Crédito
+            </button>
+          </div>
+
+          <div className="stat">
+            <h4 className="text-white">Balance</h4>
+            <h3 className="stat-value text-lg sm:text-3xl">$89,400</h3>
+            <div className="flex flex-col gap-1 sm:flex-row py-1">
+              <button className="btn btn-sm btn-success">
+                <IoIosAdd />
+                Ingreso
+              </button>
+              <button className="btn btn-sm btn-info">
+                <IoIosAdd />
+                Premio
+              </button>
             </div>
-            <div className='flex flex-wrap gap-3'>
-                <div className="stats bg-black/70 flex flex-col max-w-sm text-white">
-                    <div className="stat">
-                        <div className="stat-title text-white">cliente</div>
-                        <div className="stat-value">Client name</div>
-                        <div className="stat-actions">
-                            <button className="btn btn-sm btn-error">Add credit</button>
-                        </div>
-                    </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-                    <div className="stat">
-                        <div className="stat-title text-white">Balance</div>
-                        <div className="stat-value">$89,400</div>
-                        <div className="stat-actions space-x-1">
-                            <button className="btn btn-sm btn-success">Añadir ingreso</button>
-                            <button className="btn btn-sm btn-info">Añadir premio</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </>
-    )
-}
-
-export default Creditos
+export default Creditos;
