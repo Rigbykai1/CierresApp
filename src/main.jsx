@@ -12,9 +12,6 @@ import Caja from "./Pages/Caja/Caja"
 import Sinpe from "./Pages/Sinpe/Sinpe"
 import Ajustes from "./Pages/Ajustes/Ajustes"
 
-
-
-
 const router = createHashRouter([
   {
     path: "/",
