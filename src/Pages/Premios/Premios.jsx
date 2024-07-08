@@ -1,7 +1,9 @@
+import React from "react";
+import AddPremiosForm from "./AddPremiosForm";
 import { IoIosAddCircleOutline } from "react-icons/io";
-import AddCreditForm from "./AddCreditForm";
 import SimpleTransactionCard from "../../Components/Cards/SimpleTransactionCard";
-const Creditos = () => {
+
+const Reportes = () => {
   const transactions = {
     transaction1: {
       cliente: "Humberto",
@@ -10,21 +12,21 @@ const Creditos = () => {
     },
     transaction2: {
       cliente: "Bismarck",
-      sorteo: "Nica 9",
-      monto: 2000,
+      sorteo: 2000,
+      monto: "Nica 3",
     },
   };
   return (
-    <>
+    <div>
       <div className="flex gap-3 pb-3">
         <button
           className="btn btn-outline btn-primary-content"
           onClick={() => document.getElementById("EditClient").showModal()}
         >
           <IoIosAddCircleOutline className="size-8" />
-          Crédito
+          Premio
         </button>
-        <AddCreditForm />
+        <AddPremiosForm />
       </div>
       <div className="flex flex-wrap gap-3 justify-evenly md:justify-start">
         {Object.values(transactions).map((transaction, index) => (
@@ -36,8 +38,8 @@ const Creditos = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
-export default Creditos;
+export default Reportes;

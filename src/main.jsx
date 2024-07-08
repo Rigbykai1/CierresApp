@@ -7,7 +7,7 @@ import Inicio from "./Pages/Inicio/Inicio";
 import Clientes from "./Pages/Clientes/Clientes";
 import Creditos from "./Pages/Creditos/Creditos";
 import Venta from "./Pages/Venta/Venta";
-import Reportes from "./Pages/Reportes/Reportes";
+import Premios from "./Pages/Premios/Premios";
 import Caja from "./Pages/Caja/Caja";
 import Sinpe from "./Pages/Sinpe/Sinpe";
 import Ajustes from "./Pages/Ajustes/Ajustes";
@@ -34,8 +34,8 @@ const router = createHashRouter([
         element: <Venta />,
       },
       {
-        path: "/Reportes",
-        element: <Reportes />,
+        path: "/Premios",
+        element: <Premios />,
       },
       {
         path: "/Caja",

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { FaHome, FaChartLine, FaCoins, FaCreditCard } from "react-icons/fa";
+import { FaHome, FaCoins, FaCreditCard, FaInfo } from "react-icons/fa";
 import { MdOutlinePersonPin } from "react-icons/md";
 import { GiCreditsCurrency } from "react-icons/gi";
 import { TbReportSearch } from "react-icons/tb";
 import { IoMdSettings } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
-import ColorModeToggler from "../ColorModeToggler";
-import SideBarToggler from "../SideBarToggler";
+import ColorModeToggler from "./ColorModeToggler";
+import SideBarToggler from "./SideBarToggler";
 
 const SideBar = () => {
   const [isOpen, setIsOpen] = useState(() => {
@@ -76,17 +76,17 @@ const SideBar = () => {
           className={`btn ${selectedLink("Venta")} justify-between ${btnSize}`}
           to="/Venta"
         >
-          <FaChartLine className="size-5" />
+          <FaInfo className="size-5" />
           {isOpen ? "Venta" : ""}
         </Link>
         <Link
           className={`btn ${selectedLink(
-            "Reportes"
+            "Premios"
           )} justify-between ${btnSize}`}
-          to="/Reportes"
+          to="/Premios"
         >
           <TbReportSearch className="size-5" />
-          {isOpen ? "Reportes" : ""}
+          {isOpen ? "Premios" : ""}
         </Link>
         <Link
           className={`btn ${selectedLink("Caja")} justify-between ${btnSize}`}
