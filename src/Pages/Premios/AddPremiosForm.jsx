@@ -1,12 +1,12 @@
 import { FaColonSign } from "react-icons/fa6";
 
-const AddCreditForm = () => {
+const AddPremiosForm = () => {
   return (
     <>
       <dialog id="EditClient" className="modal">
         <div className="modal-box space-y-3 w-auto">
-          <h3 className="font-bold text-lg">Añadiendo crédito</h3>
-          <label className="input input-bordered flex items-center gap-2 max-w-xs">
+          <h3 className="font-bold text-lg">Añadiendo premio</h3>
+          <label className="input input-bordered flex items-center gap-2">
             <input type="text" className="grow" placeholder="Monto" />
             <FaColonSign />
           </label>
@@ -38,4 +38,4 @@ const AddCreditForm = () => {
   );
 };
 
-export default AddCreditForm;
+export default AddPremiosForm;
