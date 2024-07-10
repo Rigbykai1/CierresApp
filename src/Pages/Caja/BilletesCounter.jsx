@@ -25,12 +25,12 @@ const BilletesCounter = () => {
   };
   return (
     <>
-      <h1 className="text-5xl sm:text-7xl text-center font-extrabold">
+      <h1 className="text-4xl sm:text-7xl text-center font-extrabold">
         Billetes
       </h1>
       <div className="flex flex-wrap gap-3 justify-evenly">
         {Object.values(billetes).map((billete, index) => (
-          <MoneyCounter moneda={billete} key={index} />
+          <MoneyCounter moneda={billete} key={index} index={index} />
         ))}
       </div>
     </>

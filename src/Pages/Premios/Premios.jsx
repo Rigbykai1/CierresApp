@@ -6,14 +6,14 @@ import SimpleTransactionCard from "../../Components/Cards/SimpleTransactionCard"
 const Reportes = () => {
   const transactions = {
     transaction1: {
-      cliente: "Humberto",
+      cliente: "Carlos",
       sorteo: "Tica noche",
       monto: 200,
     },
     transaction2: {
-      cliente: "Bismarck",
-      sorteo: 2000,
-      monto: "Nica 3",
+      cliente: "Edwin",
+      sorteo: "Nica 3",
+      monto: 2000,
     },
   };
   return (
