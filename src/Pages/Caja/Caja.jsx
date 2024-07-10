@@ -8,7 +8,7 @@ import AddRetiroForm from "./AddRetiroForm";
 const Caja = () => {
   return (
     <div className="flex flex-col gap-3">
-      <div className="flex gap-1 place-items-center">
+      <div className="flex flex-wrap gap-1 place-items-center">
         <button
           className="btn btn-outline btn-primary-content"
           onClick={() => document.getElementById("doClose").showModal()}

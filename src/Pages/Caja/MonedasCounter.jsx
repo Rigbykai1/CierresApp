@@ -29,12 +29,12 @@ const MonedasCounter = () => {
   };
   return (
     <>
-      <h1 className="text-5xl sm:text-7xl text-center font-extrabold">
+      <h1 className="text-4xl sm:text-7xl text-center font-extrabold">
         Monedas
       </h1>
       <div className="flex flex-wrap gap-3 justify-evenly">
         {Object.values(monedas).map((moneda, index) => (
-          <MoneyCounter moneda={moneda} key={index} />
+          <MoneyCounter moneda={moneda} key={index} index={index} />
         ))}
       </div>
     </>

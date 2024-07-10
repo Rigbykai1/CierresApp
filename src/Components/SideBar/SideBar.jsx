@@ -41,12 +41,13 @@ const SideBar = () => {
   const btnSize = isOpen ? "w-32" : "w-full";
 
   return (
-    <div className="flex flex-col p-2 gap-3 h-[97vh] bg-neutral m-2 rounded-sm justify-between">
-      <div className="flex flex-col gap-3">
+    <div className="p-2 gap-1 bg-neutral m-2 h-auto">
+      <div className="flex flex-col gap-1">
         <SideBarToggler isOpen={isOpen} handleBar={handleBar} />
         <ColorModeToggler />
       </div>
-      <div className="flex flex-col gap-3">
+      <div className="divider" />
+      <div className="flex flex-col gap-1">
         <Link
           className={`btn ${selectedLink("")} justify-between ${btnSize}`}
           to="/"
@@ -102,8 +103,6 @@ const SideBar = () => {
           <FaCreditCard className="size-5" />
           {isOpen ? "Sinpe" : ""}
         </Link>
-      </div>
-      <div className="flex flex-col gap-3">
         <Link
           className={`btn ${selectedLink(
             "Ajustes"

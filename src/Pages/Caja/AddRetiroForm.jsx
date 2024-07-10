@@ -11,7 +11,20 @@ const AddRetiroForm = () => {
         <div className="py-4 space-y-4">
           <label className="input input-bordered flex items-center gap-2">
             <FaColonSign />
-            <input type="text" className="grow" placeholder="Monto" required />
+            <input
+              type="number"
+              className="grow"
+              placeholder="Monto"
+              required
+            />
+          </label>
+          <label className="input input-bordered flex items-center gap-2">
+            <input
+              type="Text"
+              className="grow"
+              placeholder="Descripción"
+              required
+            />
           </label>
           <div className="flex gap-4 justify-between">
             <button className="btn btn-success text-base-100">Guardar</button>
