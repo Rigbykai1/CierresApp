@@ -3,7 +3,7 @@ import { FaColonSign } from "react-icons/fa6";
 const AddCreditForm = () => {
   return (
     <>
-      <dialog id="EditClient" className="modal">
+      <dialog id="EditCredit" className="modal">
         <div className="modal-box space-y-3 w-auto">
           <h3 className="font-bold text-lg">Añadiendo crédito</h3>
           <label className="input input-bordered flex items-center gap-2 max-w-xs">
