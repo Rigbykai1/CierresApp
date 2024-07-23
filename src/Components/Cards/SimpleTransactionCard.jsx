@@ -3,6 +3,7 @@ import { FaColonSign } from "react-icons/fa6";
 
 const SimpleTransactionCard = (props) => {
   const { title, subtitle, amount } = props;
+
   return (
     <div className="card card-side bg-primary-content/90 shadow-xl px-4 text-primary">
       <div className="card-body p-4">

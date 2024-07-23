@@ -1,0 +1,35 @@
+import { FaSearch } from "react-icons/fa";
+import { FaColonSign } from "react-icons/fa6";
+
+const creditCard = (props) => {
+  const { transaction, setTransactionInfo } = props;
+  const handleModal = () => {
+    setTransactionInfo(transaction);
+  };
+  return (
+    <div className="card card-side bg-primary-content/90 shadow-xl px-4 text-primary">
+      <div className="card-body p-4">
+        <h2 className="card-title text-base-content">{transaction.cliente}</h2>
+        <h4 className="text-sm font-light">{transaction.sorteo}</h4>
+        <p className="flex items-center">
+          <FaColonSign />
+          {transaction.monto}
+        </p>
+        <div className="card-actions justify-end">
+          <button
+            className="btn btn-outline btn-primary"
+            onClick={() => {
+              document.getElementById("EditCreditTransaction").showModal();
+              handleModal();
+            }}
+          >
+            <FaSearch className="size-6 px-1" />
+            Transacción
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default creditCard;
