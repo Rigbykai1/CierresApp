@@ -30,7 +30,7 @@ const BilletesCounter = () => {
       </h1>
       <div className="flex flex-wrap gap-3 justify-evenly">
         {Object.values(billetes).map((billete, index) => (
-          <MoneyCounter moneda={billete} key={index} index={index} />
+          <MoneyCounter moneda={billete} key={index} index={index} formID={"BilletesCounter"} />
         ))}
       </div>
     </>

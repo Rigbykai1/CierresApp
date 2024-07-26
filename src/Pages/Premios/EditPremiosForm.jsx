@@ -13,7 +13,7 @@ const EditPremiosForm = (props) => {
                         <MdDelete className="size-6" />
                     </button>
                 </div>
-                <div className="flex flex-col gap-3 pt-4">
+                <div className="flex flex-col gap-3 py-4">
                     <div>
                         <span>Cliente</span>
                         <select className="select select-bordered w-full">
