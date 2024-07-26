@@ -1,9 +1,13 @@
-import React from "react";
+import { React, useState } from "react";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import AddSinpeModal from "./AddSinpeModal";
-import SimpleTransactionCard from "../../Components/Cards/SimpleTransactionCard";
+import SinpeCard from "./SinpeCard";
+import EditSinpeForm from "./EditSinpeForm";
 
 const Sinpe = () => {
+  const [transactionInfo, setTransactionInfo] = useState("");
+  const addSinpeModalID = "AddSinpeTransaction"
+  const editSinpeModalID = "EditSinpeTransaction";
   const transactions = {
     Ingreso1: {
       cliente: "Griselda",
@@ -22,23 +26,24 @@ const Sinpe = () => {
       <div className="flex gap-3 pb-3">
         <button
           className="btn btn-outline btn-primary-content"
-          onClick={() => document.getElementById("AddSinpeModal").showModal()}
+          onClick={() => document.getElementById(addSinpeModalID).showModal()}
         >
           <IoIosAddCircleOutline className="size-8" />
           Sinpe
         </button>
-        <AddSinpeModal />
+        <AddSinpeModal modalId={addSinpeModalID} />
       </div>
       <div className="flex flex-wrap justify-evenly md:justify-start gap-3">
         {Object.values(transactions).map((transaction, index) => (
-          <SimpleTransactionCard
+          <SinpeCard
             key={index}
-            title={transaction.cliente}
-            subtitle={transaction.tipo}
-            amount={transaction.monto}
+            transaction={transaction}
+            setTransactionInfo={setTransactionInfo}
+            modalID={editSinpeModalID}
           />
         ))}
       </div>
+      <EditSinpeForm transaction={transactionInfo} modalID={editSinpeModalID} />
     </>
   );
 };

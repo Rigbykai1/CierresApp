@@ -2,16 +2,18 @@ import { IoMdPersonAdd } from "react-icons/io";
 import { BsFillTelephoneFill } from "react-icons/bs";
 
 const AddClientButton = () => {
+  const addClientModalID = "AddClient"
+
   return (
     <>
       <button
         className="btn btn-outline"
-        onClick={() => document.getElementById("addCliente").showModal()}
+        onClick={() => document.getElementById(addClientModalID).showModal()}
       >
         <IoMdPersonAdd />
         Cliente
       </button>
-      <dialog id="addCliente" className="modal">
+      <dialog id={addClientModalID} className="modal">
         <div className="modal-box w-auto">
           <div className="flex justify-between">
             <h3 className="font-bold text-lg">Añadiendo cliente</h3>
@@ -51,7 +53,7 @@ const AddClientButton = () => {
             </label>
             <div className="flex gap-4 justify-between">
               <button className="btn btn-success text-base-100">Guardar</button>
-              <button className="btn btn-error text-base-100">Cancelar</button>
+              <button className="btn btn-error text-base-100" onClick={() => document.getElementById(addClientModalID).close()}>Cancelar</button>
             </div>
           </div>
         </div>

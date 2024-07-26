@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import AddPremiosForm from "./AddPremiosForm";
 import { IoIosAddCircleOutline } from "react-icons/io";
-import SimpleTransactionCard from "../../Components/Cards/SimpleTransactionCard";
+import PremiosCard from "./PremiosCard";
+import EditPremiosForm from "./EditPremiosForm";
 
 const Reportes = () => {
+  const [transactionInfo, setTransactionInfo] = useState("");
+  const addingModalID = "agregarPremio"
+  const editingModalID = "editarPremio"
   const transactions = {
     transaction1: {
       cliente: "Carlos",
@@ -21,23 +25,24 @@ const Reportes = () => {
       <div className="flex gap-3 pb-3">
         <button
           className="btn btn-outline btn-primary-content"
-          onClick={() => document.getElementById("EditClient").showModal()}
+          onClick={() => document.getElementById(addingModalID).showModal()}
         >
           <IoIosAddCircleOutline className="size-8" />
           Premio
         </button>
-        <AddPremiosForm />
+        <AddPremiosForm modalID={addingModalID} />
       </div>
       <div className="flex flex-wrap gap-3 justify-evenly md:justify-start">
         {Object.values(transactions).map((transaction, index) => (
-          <SimpleTransactionCard
+          <PremiosCard
             key={index}
-            title={transaction.cliente}
-            subtitle={transaction.sorteo}
-            amount={transaction.monto}
+            transaction={transaction}
+            setTransactionInfo={setTransactionInfo}
+            modalID={editingModalID}
           />
         ))}
       </div>
+      <EditPremiosForm transaction={transactionInfo} modalID={editingModalID} />
     </div>
   );
 };

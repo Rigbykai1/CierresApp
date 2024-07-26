@@ -1,8 +1,9 @@
 import { FaColonSign } from "react-icons/fa6";
 
-const AddSinpeModal = () => {
+const AddSinpeModal = (props) => {
+  const { modalId } = props
   return (
-    <dialog id="AddSinpeModal" className="modal">
+    <dialog id={modalId} className="modal">
       <div className="modal-box space-y-3 space-x-3 w-auto">
         <h3 className="font-bold text-lg">Añadiendo sinpe</h3>
         <label className="input input-bordered flex items-center gap-2 w-auto">
@@ -26,7 +27,7 @@ const AddSinpeModal = () => {
         </select>
         <div className="flex gap-4 justify-between">
           <button className="btn btn-success text-base-100">Guardar</button>
-          <button className="btn btn-error text-base-100">Cancelar</button>
+          <button className="btn btn-error text-base-100" onClick={() => document.getElementById(modalId).close()}>Cancelar</button>
         </div>
       </div>
       <form method="dialog" className="modal-backdrop">

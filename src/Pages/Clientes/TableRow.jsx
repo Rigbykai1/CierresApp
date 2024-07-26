@@ -2,7 +2,7 @@ import React from "react";
 import { FaEdit } from "react-icons/fa";
 
 const TableRow = (props) => {
-  const { clientInfo, setSelectedClientInfo } = props;
+  const { clientInfo, setSelectedClientInfo, modalID } = props;
 
   const handleModal = () => {
     setSelectedClientInfo(clientInfo);
@@ -20,7 +20,7 @@ const TableRow = (props) => {
         <button
           className="btn btn-outline"
           onClick={() => {
-            document.getElementById("EditClientModal").showModal();
+            document.getElementById(modalID).showModal();
             handleModal();
           }}
         >

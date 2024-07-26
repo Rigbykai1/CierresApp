@@ -2,13 +2,9 @@ import { FaColonSign } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
 
 const EditCreditForm = (props) => {
-  const { transactionInfo, setTransactionInfo } = props;
-  const handleClose = () => {
-    setTransactionInfo("");
-  };
-
+  const { transaction, modalID } = props;
   return (
-    <dialog id="EditCreditTransaction" className="modal">
+    <dialog id={modalID} className="modal">
       <div className="modal-box">
         <div className="flex justify-between">
           <h3 className="font-bold text-lg">Editando datos</h3>
@@ -20,7 +16,7 @@ const EditCreditForm = (props) => {
           <div>
             <span>Cliente</span>
             <select className="select select-bordered w-full">
-              <option selected>{transactionInfo.cliente}</option>
+              <option defaultValue={transaction.cliente}>{transaction.cliente}</option>
               <option>Homer</option>
               <option>Marge</option>
               <option>Bart</option>
@@ -31,7 +27,7 @@ const EditCreditForm = (props) => {
           <div>
             <span>Sorteo</span>
             <select className="select select-bordered w-full">
-              <option selected>{transactionInfo.sorteo}</option>
+              <option defaultValue={transaction.sorteo}>{transaction.sorteo}</option>
               <option>Homer</option>
               <option>Marge</option>
               <option>Bart</option>
@@ -46,7 +42,7 @@ const EditCreditForm = (props) => {
               <input
                 type="tel"
                 className="grow"
-                placeholder={transactionInfo.monto}
+                placeholder={transaction.monto}
               />
             </label>
           </div>
@@ -55,8 +51,7 @@ const EditCreditForm = (props) => {
             <button
               className="btn btn-error text-base-100"
               onClick={() => {
-                document.getElementById("EditCreditTransaction").close();
-                handleClose();
+                document.getElementById(modalID).close();
               }}
             >
               Cancelar
@@ -65,12 +60,7 @@ const EditCreditForm = (props) => {
         </div>
       </div>
       <form method="dialog" className="modal-backdrop">
-        <button
-          onClick={() => {
-            document.getElementById("EditCreditTransaction").close();
-            handleClose();
-          }}
-        >
+        <button>
           close
         </button>
       </form>

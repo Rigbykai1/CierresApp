@@ -1,11 +1,12 @@
 import { FaSearch } from "react-icons/fa";
 import { FaColonSign } from "react-icons/fa6";
 
-const creditCard = (props) => {
-  const { transaction, setTransactionInfo, modalID } = props;
+const SimpleTransactionCard = (props) => {
+  const { transaction, modalID, setTransactionInfo } = props;
   const handleModal = () => {
     setTransactionInfo(transaction);
   };
+
   return (
     <div className="card card-side bg-neutral/80 shadow-xl px-4 text-primary">
       <div className="card-body p-4">
@@ -16,13 +17,10 @@ const creditCard = (props) => {
           {transaction.monto}
         </p>
         <div className="card-actions justify-end">
-          <button
-            className="btn btn-outline btn-primary"
-            onClick={() => {
-              document.getElementById(modalID).showModal();
-              handleModal();
-            }}
-          >
+          <button className="btn btn-outline btn-primary" onClick={() => {
+            document.getElementById(modalID).showModal()
+            handleModal()
+          }}>
             <FaSearch className="size-6 px-1" />
             Transacción
           </button>
@@ -32,4 +30,4 @@ const creditCard = (props) => {
   );
 };
 
-export default creditCard;
+export default SimpleTransactionCard;

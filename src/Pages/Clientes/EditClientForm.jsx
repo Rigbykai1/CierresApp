@@ -3,9 +3,9 @@ import { CiUser } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
 
 const EditClientForm = (props) => {
-  const { clientInfo } = props;
+  const { clientInfo, modalID } = props;
   return (
-    <dialog id="EditClientModal" className="modal">
+    <dialog id={modalID} className="modal">
       <div className="modal-box">
         <div className="flex justify-between">
           <h3 className="font-bold text-lg">Editando datos</h3>
@@ -49,7 +49,7 @@ const EditClientForm = (props) => {
           </div>
           <div className="flex gap-4 justify-between">
             <button className="btn btn-success text-base-100">Guardar</button>
-            <button className="btn btn-error text-base-100">Cancelar</button>
+            <button className="btn btn-error text-base-100" onClick={() => document.getElementById(modalID).close()}>Cancelar</button>
           </div>
         </div>
       </div>

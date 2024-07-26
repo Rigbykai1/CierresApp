@@ -5,7 +5,7 @@ import EditCreditForm from "./EditCreditForm";
 import { useState } from "react";
 const Creditos = () => {
   const [transactionInfo, setTransactionInfo] = useState("");
-  console.log(transactionInfo);
+  const addCreditFormID = "AddCredit";
   const transactions = {
     transaction1: {
       id: 1,
@@ -20,18 +20,17 @@ const Creditos = () => {
       monto: 2000,
     },
   };
-
   return (
     <>
       <div className="flex gap-3 pb-3">
         <button
           className="btn btn-outline btn-primary-content"
-          onClick={() => document.getElementById("EditCredit").showModal()}
+          onClick={() => {document.getElementById(addCreditFormID).showModal()}}
         >
           <IoIosAddCircleOutline className="size-8" />
           Crédito
         </button>
-        <AddCreditForm />
+        <AddCreditForm modalID={addCreditFormID}/>
       </div>
       <div className="flex flex-wrap gap-3 justify-evenly md:justify-start">
         {Object.values(transactions).map((transaction, index) => (
@@ -39,12 +38,13 @@ const Creditos = () => {
             key={index}
             transaction={transaction}
             setTransactionInfo={setTransactionInfo}
+            modalID="EditCreditTransaction"
           />
         ))}
       </div>
       <EditCreditForm
-        transactionInfo={transactionInfo}
-        setTransactionInfo={setTransactionInfo}
+        transaction={transactionInfo}
+        modalID="EditCreditTransaction"
       />
     </>
   );

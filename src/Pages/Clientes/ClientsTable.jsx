@@ -4,6 +4,8 @@ import TableRow from "./TableRow";
 
 const ClientsTable = () => {
   const [selectedClientInfo, setSelectedClientInfo] = useState("");
+  const editClientFormID = "editClientForm"
+
   const clientsInfo = {
     cliente1: {
       id: "1",
@@ -92,6 +94,7 @@ const ClientsTable = () => {
                 clientInfo={client}
                 key={index}
                 setSelectedClientInfo={setSelectedClientInfo}
+                modalID={editClientFormID}
               />
             ))}
           </tbody>
@@ -108,7 +111,7 @@ const ClientsTable = () => {
             </tr>
           </tfoot>
         </table>
-        <EditClientForm clientInfo={selectedClientInfo} />
+        <EditClientForm clientInfo={selectedClientInfo} modalID={editClientFormID} />
       </div>
     </>
   );

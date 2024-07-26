@@ -1,9 +1,11 @@
 import { FaColonSign } from "react-icons/fa6";
 
-const AddPremiosForm = () => {
+const AddPremiosForm = (props) => {
+  const { modalID } = props
+
   return (
     <>
-      <dialog id="EditClient" className="modal">
+      <dialog id={modalID} className="modal">
         <div className="modal-box space-y-3 w-auto">
           <h3 className="font-bold text-lg">Añadiendo premio</h3>
           <label className="input input-bordered flex items-center gap-2">
@@ -27,7 +29,7 @@ const AddPremiosForm = () => {
           </select>
           <div className="flex gap-4 justify-between">
             <button className="btn btn-success text-base-100">Guardar</button>
-            <button className="btn btn-error text-base-100">Cancelar</button>
+            <button className="btn btn-error text-base-100" onClick={() => document.getElementById(modalID).close()}>Cancelar</button>
           </div>
         </div>
         <form method="dialog" className="modal-backdrop">
